@@ -1,24 +1,16 @@
 <p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-md-6">
+    <%= image_tag @artwork.image %>
+  </div>
+  <div class="col-md-6">
+    <%= @artwork.name %>
+    <%= @artwork.author %>
+    <%= @artwork.description %>
+    <%= @artwork.price %>
+  </div>
+</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @artwork.name %>
-</p>
-
-<p>
-  <strong>Author:</strong>
-  <%= @artwork.author %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @artwork.description %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @artwork.price %>
-</p>
 
 <%= link_to 'Edit', edit_artwork_path(@artwork) %> |
 <%= link_to 'Back', artworks_path %>
