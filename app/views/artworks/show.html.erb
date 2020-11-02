@@ -1,13 +1,21 @@
 <p id="notice"><%= notice %></p>
 <div class="row">
   <div class="col-md-6">
-    <%= image_tag @artwork.image %>
+    <%= image_tag @artwork.image, class: 'img-responsive' %>
   </div>
   <div class="col-md-6">
-    <%= @artwork.name %>
-    <%= @artwork.author %>
-    <%= @artwork.description %>
-    <%= @artwork.price %>
+    <div>
+      <h2><%= @artwork.name %></h2>
+    </div>
+    <div>
+      <h3><%= @artwork.author %></h3>
+    </div>
+    <div>
+      <p><%= @artwork.description %></p>
+    </div>
+    <div>
+      <p><strong>$<%= @artwork.price/100 %></strong></p>
+    </div>
   </div>
 </div>
 
