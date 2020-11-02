@@ -24,7 +24,7 @@ class ArtworksController < ApplicationController
   # POST /artworks
   # POST /artworks.json
   def create
-    @artwork = Artwork.new(artwork_params)
+    @artwork = current_user.artworks.new(artwork_params)
 
     respond_to do |format|
       if @artwork.save
